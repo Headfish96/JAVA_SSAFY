@@ -1,0 +1,24 @@
+package com.ssafy.ws_01.step3;
+
+/**
+ * 도서 객체를 생성하고 정보를 출력하는 클래스
+ */
+public class BookTest {
+	public static void main(String[] args) {
+		Book book1 = new Book("21424", "Java Pro", "김하나", "jaen.kr", 15000, "Java기본 문법");
+		Book book2 = new Book();
+		
+		book2.isbn = "35355";
+		book2.title = "분석설계";
+		book2.author = "김하나";
+		book2.publisher = "jaen.kr";
+		book2.price = 30000;
+		book2.desc = "SW 모델림";
+		
+		
+		
+		System.out.println(book1.toString());
+		System.out.println(book2.toString());
+	}
+
+}

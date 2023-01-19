@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+
+public class Solution_1959 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("helloworld");
+		int T = 0; //테스트케이스의 수 초기화
+		int N,M = 0; // A배열의 크기와 B배열의 크기를 나타내수는 변수 초기화
+		
+		Scanner sc = new Scanner(System.in);
+		
+		T = sc.nextInt();
+		N = sc.nextInt();
+		M = sc.nextInt();
+		System.out.printf("T는 %d, N은 %d, M은 %d", T,N,M);
+	}
+
+}

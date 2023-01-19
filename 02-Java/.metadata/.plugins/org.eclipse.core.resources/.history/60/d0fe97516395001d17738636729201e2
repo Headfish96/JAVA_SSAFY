@@ -1,0 +1,37 @@
+package com.ssafy.day01;
+
+public class StringTest {
+	// TODO Auto-generated method stub
+			/*
+			 * 자바의 문자열 관련 API 클래스
+			 * 
+			 * 불변
+			 * String
+			 * 자기가 가지고 있는 공간의 문자열 값을 변경할 수 없다.
+			 *
+			 * 
+			 * 
+			 * 
+			 * 가변
+			 * StringBuffer
+			 * StringBuilder
+			 * 
+			 */
+	static void exam01() {
+		String str1 = "a";
+		StringBuffer str2 = new StringBuffer("a");
+		StringBuilder str3 = new StringBuilder("a");
+		
+		System.out.println(str1.concat("b"));
+		System.out.println(str2.append("b"));
+		System.out.println(str3.append("b"));
+		
+		System.out.println(str1);
+		System.out.println(str2);
+		System.out.println(str3);
+	}
+	public static void main(String[] args) {
+		exam01();
+	}
+
+}

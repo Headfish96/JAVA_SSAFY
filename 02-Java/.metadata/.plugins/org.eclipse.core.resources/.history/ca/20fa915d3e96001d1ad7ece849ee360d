@@ -1,0 +1,8 @@
+package com.ssafy.hw.step2;
+
+public class UserTest {
+	public static void main(String[] args) {
+		User userinfo = new User(); //User 객세생성
+		System.out.println(userinfo.id);
+	}
+}

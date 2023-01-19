@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 50%;
+            margin: auto;
+        }
+        table, th, td {
+            border: 1px solid #345;
+        }
+        th {
+            background-color: #333;
+            color: aqua;
+        }
+        td {
+            padding: 5px;
+            border-collapse: collapse;            
+        }
+    </style>
+    <!--
+        같은 css 효과면 위와 같이 한번에 해줄 수 있다.
+    -->
+</head>
+<body>
+    <!--
+        table은 부모 자식 관계를 가진다.
+        table > thead, tbody, tfoot > tr > th, td
+        위 구조를 반드시 지켜야한다
+        특히 tr > th, td 는 더더욱!
+    -->
+    
+    <!--
+        위와 같이 쓰면 구조가 깨진거다 왜냐하면 table 밑에는 thead, tbody 등이 나와야하는ㄷ
+        바로 td를 썼다.
+        하지만 돌아가긴한다. 브라우저에서 tbody를 만들어서 적용시킨다.
+        돌아가긴하다고 해서 이렇게 사용하면 안된다.
+        내가 작성한건 table>tr 인데 브라우저 랜더링은 table>tbody>tr이다.
+        table ,tr 이렇게 쓰면 모든 자손을 다 접근하는 방식이다.
+        
+    -->
+    <div>
+        <table>
+            <tr>
+                <td colspan="3">선수정보</td>
+            </tr>
+            <tr>
+                <th>이름</th>
+                <th>국적</th>
+                <th>소속팀</th>
+            </tr>
+            <tr>
+                <td>손흥민</td>
+                <td rowspan="2">대한민국</td>
+                <td>토트넘</td>
+            </tr>
+            <tr>
+                <td>이강인</td>
+                <td>마요르카</td>
+            </tr>
+            <tr>
+                <td>총인원</td>
+                <td colspan="2">1명</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

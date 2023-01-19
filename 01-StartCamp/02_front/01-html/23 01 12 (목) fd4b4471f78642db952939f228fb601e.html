@@ -1,0 +1,693 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>23.01.12.(목)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="fd4b4471-f786-42db-9529-39f228fb601e" class="page sans"><header><h1 class="page-title">23.01.12.(목)</h1></header><div class="page-body"><p id="6a4d10eb-613d-45d4-bdc6-fefc42f84769" class="">
+</p><blockquote id="74a41b85-6439-428e-a731-69f3fce5d0cf" class="">다음번 수업 전까지 금일 프론트 수업 내용 익히기
+추후 수업 진행시 교육하지 않을 예정임
+vs code 설치 및 플러그인(extension) 추가</blockquote><ul id="f6a3a77a-5dad-4af1-9e1f-f67bfa4c144b" class="toggle"><li><details open=""><summary>Live Server (VS code Extension)</summary><p id="41292208-1a57-4f6a-a1d8-7f6becef014b" class="">오늘 작업한 것들을 앞으로는 서버에 올려서 사용하기에 확장 프로그램 설치</p><ul id="307e175a-97ca-4612-a6fd-d357d51cf003" class="bulleted-list"><li style="list-style-type:disc">역할: 코드 작성하는 것을 실시간으로 반영해서 보여준다.
+* 단축키(alt + L + O)</li></ul></details></li></ul><ul id="88c43ee3-d057-46a5-b991-b27ef5e4a2ae" class="toggle"><li><details open=""><summary>서버와 클라이언트 개념</summary><p id="a2047aa6-1694-436f-bea9-2ac2649f0e5b" class="">서버: 응답을 해주는 쪽</p><p id="9d51aea3-0de0-4e64-a15d-34ee6d4e5bcf" class="">클라이언트: 요청을 하는 쪽</p><p id="cdb5433e-4a83-472d-ab17-1661343e84e1" class="">ex) 네이버는 서버인가 클라이언트인가?</p><p id="c9de857a-6337-44f5-8b59-cad2a9d23058" class="">사용자의 입장에서 네이버는 서버임. 내 요청을 답해주니까.</p><ul id="8aed0c11-4748-4622-b109-62487070851c" class="bulleted-list"><li style="list-style-type:disc">앱에서는 보통 브라우저를 통해 요청. 따라서 브라우저는 대표적인 클라이언트 서비스</li></ul></details></li></ul><ul id="f98a0c87-cc56-4265-b0e1-e858e9342142" class="toggle"><li><details open=""><summary>웹 소켓 기술</summary><ul id="5bab1a52-df2f-4fe6-bfea-1ada08328cc5" class="bulleted-list"><li style="list-style-type:disc">live server처럼 수정하면 즉시 반영하는 것을 뭐라고 하는가? → 웹 소켓 기술이라고 한다.</li></ul><ul id="def68282-8e71-4273-bb4a-462cca3dcd4d" class="bulleted-list"><li style="list-style-type:disc">vs코드는 일렉트론이라는 기술로 만들었다. 즉, 결국 css, html 등을 이용하여 만들었다.</li></ul><ul id="de951f77-30f7-4133-b99e-5f1f164e9363" class="bulleted-list"><li style="list-style-type:disc">vs code &gt; help &gt; toggle developer tools
+이걸 보면 vs code가 어떻게 이루어졌는지 파악 가능</li></ul></details></li></ul><ul id="62d1ce09-2188-4b18-93a0-9d686af97de0" class="toggle"><li><details open=""><summary>마크업과 하이퍼 택스트</summary><ul id="b2f140c7-e387-4613-b4d8-9a22e765476a" class="bulleted-list"><li style="list-style-type:disc">mark up: 어떤 텍스트에 의미를 부여한 것이 마크업</li></ul><ul id="387c08a3-8fe4-458a-9f26-e5f0ffa8764c" class="bulleted-list"><li style="list-style-type:disc">hyper text: 하나의 사이트 내에 어디로든 이동할 수 있도록 구조가 짜여진 것</li></ul></details></li></ul><ul id="fa63aa48-1e19-4200-933f-2922c9843041" class="toggle"><li><details open=""><summary>element</summary><ul id="949802f4-92e7-4331-89a6-8a4a570c03c0" class="bulleted-list"><li style="list-style-type:disc">시작태그부터 종료태그까지의 전체를 element라고 한다.</li></ul><ul id="4eb6465c-5ba4-4cbd-a5f8-b3aa3df9ad17" class="bulleted-list"><li style="list-style-type:disc">&lt;시작태그&gt; 내용 &lt;/종료태그&gt;</li></ul><ul id="715008f0-ef4f-42dd-b801-6eae6497a7ba" class="bulleted-list"><li style="list-style-type:disc">element와 tag를 혼용해서 사용하지만 분명 다르다.</li></ul><ul id="8fe6ba38-a061-4f80-9abc-5ebb3da6df3d" class="bulleted-list"><li style="list-style-type:disc">정보 전체를 관리하는 것을 element라고 생각</li></ul><ul id="bbba3571-c5c1-4155-97c2-4d8bd3513eb8" class="bulleted-list"><li style="list-style-type:disc">이 element의 태그는 무엇이다 라고 말할 수 있음</li></ul><ul id="35dae474-88f7-47fd-9bdb-ac0e5bae966f" class="bulleted-list"><li style="list-style-type:disc">클래스의 개념과 비슷하다</li></ul><ul id="4f5ad338-cce6-4022-b706-f33036e38f07" class="bulleted-list"><li style="list-style-type:disc">*클래스를 만들때 어떤 관련된 정보가 두개 이상이면 클래스를 만들까 고민한다. 이것과 비슷하다</li></ul><ul id="6f8e5725-c0a9-4f58-9b41-70bbc1b77875" class="bulleted-list"><li style="list-style-type:disc">여러개 정보가 있을때 관리하게 편하게 객체로 관리하는 것 처럼 javascript에서는 element로 관리한다.</li></ul><ul id="cee85569-b736-4df9-ab97-ef9e2db2686a" class="bulleted-list"><li style="list-style-type:disc">최상단에 배치</li></ul></details></li></ul><ul id="2735cfe6-4a45-4afe-adf2-cd8edcd77039" class="toggle"><li><details open=""><summary>tag</summary><ul id="3b851ea4-f708-48e9-94b2-5658014fed33" class="bulleted-list"><li style="list-style-type:disc">&lt;태그명&gt;, &lt;h2&gt; &lt;div&gt; 브라우저는 태그명을 보고 어떤 의미를 갖는지 판단(마크업 기능)</li></ul><ul id="ca495f79-cf7b-4d6f-92e0-88c7e833ec72" class="bulleted-list"><li style="list-style-type:disc">태그는 시작할때 슬래쉬(/)가 있는 경우가 있음</li></ul><ul id="701f6283-e753-4250-b687-702f7a17e5e2" class="bulleted-list"><li style="list-style-type:disc">시작태그: &lt;h2&gt; 종료 태그:&lt;/h2&gt;</li></ul><ul id="31d49a99-63d7-422a-8751-52ffb59918a1" class="bulleted-list"><li style="list-style-type:disc">element의 구성 요소</li></ul><ul id="5928fce5-7464-459a-8caf-0ca1b7fa13c6" class="bulleted-list"><li style="list-style-type:disc">종료 태그가 없이 시작태그만 사용할 수도 있음. 대부분의 시작태그만 있어도 되는 것들은 안쪽에 내용을 갖지 않는 것들임. 안에 내용이 없으니 꼭 종료태그가 필요 없고 브라우저가 이를 허용함. 대표적으로 &lt;br&gt;태그가 있음.</li></ul><ul id="b62382c7-ab52-4c8b-9d06-7bb75f50ca5d" class="bulleted-list"><li style="list-style-type:disc">ex: &lt;br/&gt; or &lt;br&gt;, &lt;img/&gt;, &lt;input/&gt;</li></ul><ul id="64463d1f-1255-4bd8-9e6c-6ddc54638824" class="bulleted-list"><li style="list-style-type:disc">각 기업의 개발 가이드를 확인해서 통일해야한다.</li></ul></details></li></ul><ul id="9d0dc870-b3ad-4bf0-9ffd-757e523f0f6d" class="toggle"><li><details open=""><summary>Attribute</summary><ul id="4521b1fb-6b2e-4b0e-b88f-b468d7bf0383" class="bulleted-list"><li style="list-style-type:disc">시작태그에만 붙을 수 있는것이 attribute(속성)임</li></ul><ul id="d2aa51ff-76a6-4299-9812-80b2ffa031ce" class="bulleted-list"><li style="list-style-type:disc">이름 = ‘값’</li></ul><ul id="5e209be9-62ea-4900-8576-13643cf9767d" class="bulleted-list"><li style="list-style-type:disc">ex) &lt;div id = “a”&gt;</li></ul><ul id="cf6f83da-502e-48be-9974-1f6c3d1f8a2e" class="bulleted-list"><li style="list-style-type:disc">꼭 하나가 아니라 없을수도 있고 여러개일 수도 있음</li></ul><ul id="2c3dc205-9744-413e-9bb5-4f0e4762f2b8" class="bulleted-list"><li style="list-style-type:disc">ex) &lt;div id = “a” class = “b”&gt;</li></ul><ul id="cf39ae76-4d79-4774-bfe4-fec52b5b6f72" class="bulleted-list"><li style="list-style-type:disc">속성이 필수는 아니나 속성을 주기 위해서는 시작태그에 준다는 것을 기억</li></ul><ul id="6d23311f-e089-4245-88a8-7da76ceb880e" class="bulleted-list"><li style="list-style-type:disc">시작태그이자 종료태그인 것들에 붙여도 된다.</li></ul></details></li></ul><p id="bc0d1a72-da92-45dd-a562-2336f0a41e1f" class="">
+</p><p id="50b66b60-a80e-41b2-b11a-667d4a6883ef" class="">최상단에 배치하는 엘리먼트를 루트 엘리먼트라고하며 반드시 하나만 있어야함
+&lt;!Doctype html&gt; html5로 작성된 문서입니다를 알려주는 것임
+html5가 되며 이 부분이 간단해졌다.</p><p id="778028f2-7c84-46b2-a243-bf89c2da12eb" class="">
+</p><p id="c1cd9054-783c-47fe-9159-5123499c4ec6" class="">emmet? vs code에 자동으로 깔려있는 프로그램</p><p id="0b7d487e-5643-48fa-b9d2-45ca8c4dd3d0" class="">사용법을 익힐 것</p><p id="cd339870-57a1-46dc-87fe-2dc01c454162" class="">emmet 사용이 익숙해지면 생산성이 많이 올라갈 것임</p><p id="10beb4cd-7914-463d-8626-0d0c778e1df1" class="">꺾쇠(&gt;)를 사용하면 자식 자동 생성, +를 사용하면 시블링 자동 생성</p><p id="7025c01e-4684-4886-b982-7cd6d6acaa78" class=""> (ex: table&gt;tr&gt;td + td + td)</p><p id="50997855-8cb1-4e0c-80e3-793ca93a414d" class="">
+</p><p id="b5191a04-7e95-428b-8327-3b609312d625" class="">style 태그는 태그 안에 있는것이 css라고 알려주는 역할.</p><p id="209988ac-213f-4c69-b478-5d5c826925d3" class="">구글 개발자 모드에서 수정하는 방법도 알아야겠음</p><p id="be6492a0-ceb8-43c0-adc1-9e6d6cef0c5e" class="">사소한 것들은 웹페이지를 열어서 개발자 모드에서 수정을 하고 다시 편집기로 받아올 수도 있다.</p><p id="a9b16d5f-1078-438c-9f75-8da29bd781a3" class="">영역을 잡기 좋기 때문에 br보다는 p태그를 자주 사용한다.</p><p id="0a2db281-d5b4-4fab-b4f5-e980137c526e" class="">br은 속성을 줄 수 없기때문에 부분 영역을 찾기가 힘들다.</p><p id="0e646a02-5ade-45b3-ae52-7fc7df8cf553" class="">영역이 잘 잡혀있어야 프로그래밍하기 편하다.</p><p id="00f64c4c-c97f-4bee-a031-ec979247865a" class="">br 태그가 줄바꿈이라는 것을 기억하자.</p><p id="08efae54-4d68-4058-83af-99e92b94108d" class="">em 태그: 강조하려는 텍스트</p><p id="ec246f59-bd63-462c-871d-70c419c152fd" class="">strong 태그: 중요한 내용</p><p id="30db0d0d-5a41-4ad0-a9d4-191426fc6a2f" class="">i,b 태그: 화면에 보이는 부분만을 처리</p><p id="28002185-771f-413e-85e2-b0940daabf39" class="">문자표의 개념</p><p id="841ce104-da2a-4c03-89e5-c42b430d6559" class="">
+</p><p id="805d31a7-43ee-4c81-a964-330e8a624721" class="">이미지를 브라우저에서 보여주려함</p><p id="64c75cd0-0735-4c22-b6d3-90042d7e7c17" class="">img 태그 사용</p><p id="a8ef25d4-768f-413e-924c-b79b77a7f37a" class="">이미지의 경로를 넣어주어야 한다.<div class="indented"><p id="7c73edba-3bee-425f-83d8-4260d5f64c43" class="">02_fornt.folder &gt; 01-html.folder &gt; exam-3-tag2.html
+                        &gt; assets.folder     &gt; images.folder &gt; test1.jpg</p></div></p><p id="7bb4ac0d-5421-4cea-86fb-e9a5a2cd75be" class="">exam03-tag2.html에 test1.jpg를 올려주려면</p><p id="0e44cf9d-489a-413f-a6e4-ea449ca34db6" class="">내가 asset로 바로 들어갈 수 없으니 02_front폴더까지 올라가야한다.</p><p id="192f6c3e-9130-4432-9dbe-8eff35ba09b6" class="">나는 지금 01-html폴더에 있으니 한칸 상위로 올라갔다가 assets 폴더로 들어가야한다.</p><p id="0eae7932-e63c-403e-a72a-c37a2384ac66" class="">이걸 상대경로하고 한다.</p><p id="ad4c36f4-c31a-4a33-98fe-a4a2daa35353" class="">alt의 속성:alt는 대체 텍스트이다.</p><p id="b5d1edd0-188e-4379-8c05-11f7f0ae92af" class="">a의 속성으로 링크를 누르게되면 기본적으로 가장 위로 올라간다.</p><p id="deee6396-ba0d-45b4-b361-450351ff083a" class="">이를 막기위해서 ajax와 같은 경우 스크롤가지 그대로 페이지 바꾸는 그런거임</p><p id="8d2d5e1b-c308-4643-b58e-94e6425e116e" class="">
+</p><p id="6ec755d5-d535-426d-982d-8550c90f2ffe" class="">&lt;html&gt;</p><p id="b0580d3a-d18f-4962-857b-5dd21af8a75d" class="">
+</p><p id="78a06740-a06d-40e5-b682-5a373b9bbaa2" class="">div 태그는 elelment를 담아두는 컨테이너 역할로 많이 사용한다.</p><p id="0a405ca7-5c4b-4cdb-ab98-fa99a60b9ee8" class="">예를들어</p><p id="a228a695-54e9-42fe-9c88-cf2fb4fb243c" class="">css에서 가장 어려워하는 것이 이런 것임</p><p id="8d82c990-6b03-4c0e-b004-67e4ad384418" class="">내가 원하는대로 위치를 잡는 것이 어려움</p><p id="ec485d50-64fa-4564-960e-f536965b920d" class="">내가 메인페이지 화면을 만드는데,</p><p id="f020d52a-16d2-4f4f-a39e-794fff7f9d8b" class="">상단이 있고 헤더가 있고</p><p id="91a17ce1-dfc5-4e1b-b928-e0b7103571ff" class="">elelment를 여러개 배치하거나 화면안에 여러개를 원하는 위치에 배치하는게 어려운데, 이게 어렵게 느껴지는 이휴는</p><p id="ea3c80e4-e94b-4de0-ab09-0604fa1681bc" class="">&lt;div&gt; 1 &lt;/div&gt;</p><p id="0e129678-a7dc-4b66-bdc3-988dab191d3a" class="">&lt;div&gt; 2 &lt;/div&gt;</p><p id="0f9a442d-56ba-4153-97e3-9e875a20d887" class="">이렇게 하면 공간이 있음에도 다음 줄로 나온다 같은 줄에 있지 않다.</p><p id="203fb70a-e894-403d-ab6c-540fa5d8987e" class="">한 줄 전체를 태그의 영역으로 보기때문이다.</p><p id="4f4538b2-9848-4a55-b8fd-fabee03de9e2" class="">이런 한 줄 전체를 영역으로 삼는 속성을 block속성이라고 한다.</p><p id="b6cea10a-d95c-4b39-9232-01a450c4b7eb" class="">
+</p><p id="7434953d-2491-434a-915e-3bc68a1cec9f" class="">span 태그: 이건 div와는 다르게 elelment가 옆으로 간다</p><p id="516d847d-e151-43d5-a008-1ff43d1fe296" class="">span은 내용물으 크게 만큼을 width로 설정하는데</p><p id="6e38f830-e2ce-4a24-964e-879b413bc2b0" class="">이러한 속성을 inline속성이라고 한다.</p><p id="8d937275-13be-43c6-8f3f-a825c4c9dca5" class="">
+</p><p id="95ea8d2a-ae89-4bae-9fc1-3ff3cea07ebc" class="">p태그도 내용물에 상관 없이 줄을 다 먹기때문에 block속성이다.</p><p id="ca0ba6af-9451-46c0-aef8-8dfbff077c1a" class="">h태그도 마찬가지이다.</p><p id="618fcb4b-cffe-4397-b58a-b0f97b15e1d0" class="">
+</p><p id="d7d280ac-584d-47f9-8e55-55f2d39ad813" class="">a태그는 lnline속성이다</p><p id="4b890b83-f9d3-45cb-98b3-1a8f08976cd9" class="">img태그는 inline속성이다.</p><p id="cb2b6bce-3bb8-42b7-bd5f-42c3f5f751a1" class="">
+</p><p id="1da9ea7b-9eb3-4325-a1b6-c4eea28ab71c" class="">&lt;ul&gt;<div class="indented"><p id="292cacab-6c5c-4900-ad68-cd47c6c0e685" class="">&lt;li&gt; &lt;/li&gt; </p></div></p><p id="7ac6ab34-ff73-4508-b1dc-479b56ed2a22" class="">&lt;/ul&gt;</p><p id="57e50a5b-0beb-49d0-bb83-eb66a9e27adf" class="">여기서 li가 밑으로 떨어진건 li는 block속성이기 때문이다.</p><p id="ac1116ef-3105-4efd-90cf-99514c9b958d" class="">block 속성을 inline속성으로 바꾼다면 밑으로 떨이지 않고 옆으로 갈 수 있다.</p><p id="382613cc-29f3-4924-9128-7149255dd8bb" class="">이 부분을 조정하는게 css에서 display속성이다.</p><p id="3955ac88-d241-4cdb-9604-04a4eb5b43b3" class="">div도 옆으로 하고 싶다면 inline으로 만들어주면 된다.</p><p id="19fd4e33-fa51-4847-a534-264e91955a5b" class="">
+</p><p id="c905dc97-767a-4820-9d0c-23f764a5c72e" class="">*inline의 단점</p><p id="4925f283-d9b0-44ab-a2f6-633bad7d262a" class="">크기를 내용에 따라 설정하기에 깔끔해보이지 않을 수 있다.</p><p id="40ce6b5f-c48a-463d-913a-7932f5089d2d" class="">그래서 깔끔하게 하려면 block속성도 있어야 개발자가 원하는대로 만들 수있다.</p><p id="0e0c112c-9fdd-4f55-9b61-50cf6b016f98" class="">이렇게되면 이런 속성을 inline block 속성이라고 한다.</p><p id="b501d1e1-952d-440f-a139-ab65098870c0" class="">
+</p><p id="e1ee9006-5ef0-4b99-a34a-ff16a15cad83" class="">inline의 특징:</p><p id="f167a692-d5fe-45e5-8ce3-27e2dbdf1cf8" class="">내용에 맞춰서 크기가 자동으로 지정되기 때문에 크기 지정이 의미가 없다.</p><p id="e0fcecd8-08a9-4322-ba92-8830a9b29057" class="">
+</p><p id="f07e58aa-490c-404f-9a84-ce3d3a6248d4" class="">%를 사용하면 내 부모를 기준으로 한다.</p><p id="9c448da5-2fc0-4312-8da3-fd48e61d5082" class="">px는 절대크기이다.</p><p id="76a40185-44e9-4b09-9af7-09018874c672" class="">em, %는 상대크기이며 그 기준은 부모 기준이다.</p><p id="d66f5602-35fd-4acd-8124-74a845a367d6" class="">
+</p><p id="7906b748-cd56-4579-8a76-66e47ae8c095" class="">margin은 시계방향으로 마진 값을 정한다</p><p id="6a9906dc-d4f4-4ff7-accf-56b73099d4ef" class="">위, 오른쪽 아래, 왼쪽</p><p id="18e61f5d-689a-4d4e-b83e-438539b2cd45" class=""> 북 동 남 서 순이다. 그리고 값이 북쪽과 동쪽만 있으면, 자동으로 남쪽과 서쪽은 반대 편에 있는 값을 가지고 오게 된다.</p><p id="a319a932-ba35-47c8-82f9-523ffb12708b" class="">마진이 양쪽에 적용이 되면 큰 값을 기준으로 적용된다.</p><p id="c3987022-b034-4d67-9877-2c81479ee422" class="">한 방향만 마진을 주고 싶으면 margin 뒤에 방향을 붙일 수 있다. ex) margin-top</p><p id="60e53b72-12d0-4e41-9f07-f5d8301c4962" class="">객체의 변수 접근을 할 때 css 는 하이픈(-)을 사용하고 javascript에서는 marginTop과 같이 대문자를 활용한다.</p><p id="a5c34437-1b8a-4614-b13f-50249255530a" class="">div와 content와의 간격을 padding이라고 한다.</p><p id="f214d865-803f-4d4f-a750-7736d6182112" class="">margin은 엘리먼트 외부와의 간격이다.</p><p id="8f5aab98-d83b-4f1d-ab10-eceead9ed570" class="">
+</p><p id="67e7c3cb-bdc7-4a97-803c-b687c3fc5ee5" class="">
+</p></div></article></body></html>

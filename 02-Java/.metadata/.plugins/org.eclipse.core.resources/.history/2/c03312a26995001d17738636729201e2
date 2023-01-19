@@ -1,0 +1,80 @@
+package com.ssafy.day01;
+
+public class ArrayTest {
+	static int N, M;
+	public static void main(String[] args) {
+		N = 3;
+		M = 3;
+		int[][] arr = {
+				{1,2,3},
+				{4,5,6},
+				{7,8,9},
+		};		
+		//exam01(arr); //행 우선 순회하기
+		//exam02(arr); //행 역순 순회하기
+		//exam03(arr); //열 우선 순회하기
+		exam04(arr); //지그재그 순회하기
+	}
+	
+	/*
+	 * exam01()
+	 * 1 2 3
+	 * 4 5 6
+	 * 7 8 9
+	 * 위와 같이 출력해보아라
+	 * 
+	 * exam02()
+	 * 행 역 출력해보아라
+	 * 3 2 1
+	 * 6 5 4
+	 * 9 8 7
+	 * 
+	 * exam03()
+	 * 열 우선 순회를 출력해보아라
+	 * 
+	 * exam04()
+	 * 지그재그 순회
+	 * 1 2 3
+	 * 6 5 4
+	 * 7 8 9
+	 */
+	
+	private static void exam04(int[][] arr) {
+		/*
+		 * exam01() 답
+		 * for(int i = 0; i < N; i++) {
+			for(int j = 0; j < M; j++) {
+				System.out.print(arr[i][j] + " ");
+			}
+		 *
+		 *
+		 * exam02() 답
+		 * for(int i = 0; i < N; i++ ) {
+			for(int j = 0; j < M; j++) {
+				System.out.print(arr[i][M-j-1] + " ");
+			}
+		 */
+		/*
+		 * exam03() 답
+		 * for(int i = 0; i < M; i++) {
+			for(int j = 0; j < N; j++) {
+				System.out.print(arr[j][i] +" ");
+			}
+		 */
+		/*
+		 * exam04() 오답
+		 */
+		for(int i = 0; i < N; i++) {
+			for(int j = 0; j < M; j++) {
+				if(i%2 == 0) {
+					System.out.print(arr[i][j] +" ");
+				}
+				else if(i%2 == 1) {
+					System.out.print(arr[i][M-j-1] +" ");
+				}
+			}
+		System.out.println();
+		}
+	}
+}
+

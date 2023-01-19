@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var age;
+        console.log(age); //변수가 선언되었으나 값이 없는 경우에 undefined
+        // 자바스크립트의 데이터의 타입은 값이다.
+        var v = 100; //v의 데이터 타입이 숫자
+        //v = "100"; //v의 데이터 타입이 문자
+        console.log(v); //v변수의 값에 100이 들어가 있으니 100이 출력
+        let num = 100;
+        /*
+        console.log(v); // 이렇게 코드를 짜면 자바라면 에러가 났겠으나, 자바스크립트는 undefined로 출력된다.
+        var v = 100;
+        console.log(v);
+        */
+       function fn() {
+            for (var i = 0; i<10; i++) {
+                console.log(i);
+            }
+            console.log(i) 
+            /* 이렇게 써도 에러가 나지 않고 10이 출력된다. 그 이유는?
+                이런게 문제였음. 이게 왜 문제일까?
+                자바스크립트는 블록스코프를 인정하기 않았기 때문임.
+                자바스크립트는 함수을 시행할때 함수 안에 있는 원소를 끌어올림
+            */
+       }
+        function fn2() {
+            con
+        for (var i = 0; i<10; i++) {
+                console.log(i);
+            }
+            console.log(i) 
+       fn(); //자바에서 메소드의 이름을 부르는 것 처럼 함수의 이름을 부를 수 있다.
+
+       const PI = 3.14;
+       
+    </script>
+</body>
+</html>

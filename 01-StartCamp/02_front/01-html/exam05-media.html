@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <!--
+            controls를 쓰면 컨트롤 바가 보이고
+            autopplay하면 자동으로 시작되고
+            loop로 하면 음악이 끝나면 바로 다시 시작된다.
+            사용자의 액션을 받아 동작하는건 javascript로 할 예정이다.
+        -->
+        <audio id="myAudio" autoplay loop controls>
+            <source src="../assets/raw/test.mp3" type="audio/mpeg">
+        </audio>
+    </p>
+    <p>
+        <video width="300" height="500"poster="../assets/images/test1.jpg" controls>
+            <source src="../assets/raw/test.mp4"> 
+            <!--
+                source태그를 사용하는 이유는 브라우저가 다르기 때문이다.
+                mp4가 지원이 안되고 avi가 지원이 된다면 source에 mp4, avi가 다 들어와있으면
+                avi를 찾아서 동작한다.
+                한개만 있을때는 상관 없다.
+            -->
+        </video>
+    </p>
+</body>
+</html>

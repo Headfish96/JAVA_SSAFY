@@ -1,0 +1,21 @@
+package com.ssafy.hw.step2;
+
+public class User {
+	String id;
+	String password;
+	String name;
+	String email;
+	int age;
+	
+	User() {
+		
+	}
+	User(String id, String password, String name, String email, int age){
+		this.id = id;
+		this.password = password;
+		this.name = name;
+		this.email = email;
+		this.age = age;
+	} //생성자를 만든 후에 위에 User클래스와 this를 사용해 연결하였음.
+	
+}

@@ -1,0 +1,8 @@
+package com.ssafy.day02;
+
+public class Dog { //Dog가 클래스 이름이기도 하지만 동시에 데이터 타입도 된다.
+
+	Dog() {
+		System.out.println("Dog() 생성자 호출");
+	}		
+}

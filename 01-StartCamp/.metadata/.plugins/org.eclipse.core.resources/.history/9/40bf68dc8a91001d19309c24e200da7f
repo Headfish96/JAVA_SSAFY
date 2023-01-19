@@ -1,0 +1,17 @@
+package com.ssafy.startcamp;
+
+public class Test04_배열의초기화 {
+	public static void main(String[] args) {
+		int[] arr = new int[3];
+		//arr의 타입은 배열인데 그 배열이 int를 담는거야 -> int[] arr
+		arr[1] = 100;
+		//숫자는 전부 다 0으로 초기화
+		//문자는 전부 null문자로 자동 초기화
+		//논리형은 false로 자동 초기화
+		//참조형은 null로 자동 초기화
+		System.out.println(arr[0]);
+		
+
+	}
+
+}

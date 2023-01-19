@@ -1,0 +1,17 @@
+package com.ssafy.hw.step2;
+
+public class UserTest {
+	public static void main(String[] args) {
+		User userinfo = new User(); //User 객세생성
+		System.out.println(userinfo.age);
+		userinfo.setId("ssafy") = "ssafy";
+		userinfo.password = "ssafy";
+		userinfo.name = "박싸피";
+		userinfo.email = "ssafy@ssafy.com";
+		userinfo.age = 28;
+		
+		User userinfo2 = new User("ssafy", "ssafy", "박싸피", "ssafy@ssafy.com", 28);
+		System.out.println(userinfo2.name);
+		
+	}
+}

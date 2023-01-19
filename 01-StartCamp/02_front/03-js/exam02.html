@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let msg = "이름은 홍길동 입니다.";
+        msg = '이름은 홍길동 입니다.';
+        msg = "이름은 '홍길동'입니다.";
+        msf = '이름은 "홍길동"입니다.';
+        let name = "홍길동";
+        msg = "이름은 홍길동압니다.";
+        msg = "이름은 " + name + " 입니다.";
+        //es6에서 제공해주는 템플릿 문자열을 사용하면 된다.
+        //es6 제공: 템플릿 문자열 : `문자열 ${변수}`
+        //변수인걸 알리기 위해 '${변수}' 사용
+        //원하는 위치에 내가 처리하고 싶은 변수를 두고 변수의 앞에 $기호와 중괄호를 주면 된다.
+        msg = `이름은 ${name}입니다.`;
+        console.log(msg);
+        let age = 100;
+
+        let memberInfos = "";
+        memberInfos += "<table>";
+        memberInfos += "    <tr>";
+        memberInfos += "        <td>이름</td>";
+        memberInfos += "        <td>나이</td>";
+        memberInfos += "    </tr>";
+        memberInfos += "    <tr>";
+        memberInfos += "        <td>" + name + "</td>";
+        memberInfos += "        <td>" + age + "</td>";
+        memberInfos += "    </tr>";
+        memberInfos += "</table>";
+
+        memberInfos = `
+            <table>
+                <tr>
+                    <td>이름</td>
+                    <td>나이</td>
+                </tr>
+                <tr>
+                    <td>${name}</td>
+                    <td>${age}</td>
+                </tr>
+            </table>
+        `;
+        console.log(memberInfos); //브라우저에 바로 나타나는게 아니라 콘솔에 표시하겠다는 뜻
+    </script>
+</body>
+</html>

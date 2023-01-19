@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>DOM Event 연습하기</h2>
+    <div>
+        <!--
+        <button id="addBtn" onclick="addDiv()">추가</button><!--이렇게 되면 버튼의 타입이 submit이다.
+        -->
+        <button id="addBtn">추가</button>
+    </div>
+    <div id="result"></div>
+    <!-- id값을 주는 것은 프로그램에서 빠르게 접근하기 위함이다.-->
+<!--
+    버튼을 클릭했을때 문서에서 버튼에 접근할 수 있어야함. css선택자를 통해 버튼을 찾아갈 것임
+    눌렀을때 어떻게 동작하는지 연결을 해줘야함. 버튼을 눌렀을때 id가 result인 것도 찾아와야함.
+    추가 버튼을 찾을 때 손쉽게 찾기 위해서는 id를 주는 것이 좋다. button이 한개면 상관이 없겠지만
+    많아지면 원하는 버튼을 찾을 수 없다.
+-->
+    <script>
+        let addBtn = document.querySelector('#addBtn');
+        //console.dir(addBtn);
+        addBtn.addEventListener('click', addDiv);
+        /*
+        어떤 이벤트를 사용할지가 없음. 그리고 on이 빠짐. 어차피 클릭인걸 알아서 필요가 없음
+        클릭할때 어떤 함수가 필요한지를 괄호에 클릭이랑 adddiv를 써줌
+        이렇게 사용할때의 장점은 밑에서 function addDiv2와 같이 또 만들어줄 수 있다.
+        */
+        /*
+        addBtn.onclick = addDiv;
+        addBtn.onclick = addDiv2;
+        이렇게 쓰게 되면 덮어쓰게 된다. 따라서 여러개를 하려면 다른 기능을 써줘야한다.
+        */
+        //addBtn.onclick = addDiv; 이렇게 쓰는게 맞다. 함수의 주소값을 부르는 느낌. 하지만 여러개의 함수 등록이 안된다.
+        //addBtn.onclick = addDiv(); 이렇게 쓰면 안된다. 함수가 return을 명시적으로 하지 않으면 undefined를 준다.
+        function addDiv() {
+            alert(1);
+        }
+        function addDiv2() {
+            alert(2);
+        }
+    </script>
+</body>
+</html>

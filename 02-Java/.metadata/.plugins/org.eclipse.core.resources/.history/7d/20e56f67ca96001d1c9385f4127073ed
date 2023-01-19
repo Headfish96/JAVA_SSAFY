@@ -1,0 +1,21 @@
+package com.ssafy.c_inheritance.person;
+
+public class SpiderMan extends Person {
+	boolean isSpider;
+	//has a 관계
+	Spider spider;
+	
+	public SpiderMan() {
+		this.spider = new Spider();
+	}
+	
+	
+	void fireWeb() {
+		//System.out.println("어떻게");
+		if(this.isSpider) {
+			this.spider.fireWeb();
+		}else {
+			System.out.println("사람일때는 못해");
+		}
+	}
+}

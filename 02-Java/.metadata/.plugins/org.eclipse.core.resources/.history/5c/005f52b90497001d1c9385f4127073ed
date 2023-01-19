@@ -1,0 +1,24 @@
+package com.ssafy.hw.step2;
+
+import static java.lang.Integer.toString;
+
+public class UserTest {
+	public static void main(String[] args) {
+		
+		User user1 = new User();
+		user1.setId("user1");
+		user1.setPassword("user1");
+		user1.setName("김싸피");
+		user1.setEmail("ssafy1@ssafy.com");
+		user1.setAge(27);
+
+		User user2 = new User("user2", "user2", "박싸피", "ssafy2@ssafy.com", 28);
+		
+		UserManager um = new UserManager();
+		
+		um.add(user1);
+		um.add(user2);
+		
+		System.out.println(um.toString());
+	}
+}
